@@ -45,6 +45,7 @@ q1 = cancelaciones.quantile(0.25)
 q3 = cancelaciones.quantile(0.75)
 rango_intercuartilico = q3 - q1
 
+print("1.3. Mediana y rango intercuartílico para cantidad de cancelaciones diarias: ")
 print("Mediana: ", mediana)
 print("Rango intercuartílico: ", rango_intercuartilico)
 
@@ -74,7 +75,7 @@ sns.histplot(
     kde=False, 
     color="pink", 
     edgecolor="grey")
-plt.title("Histogram de cancelaciones diarias")
+plt.title("Histograma de cancelaciones diarias")
 plt.xlabel("Cancelaciones")
 plt.ylabel("Frecuencia")
 plt.show()
@@ -122,3 +123,11 @@ plt.show()
 # probabilidad de que en un cierto día la aplicación tenga
 # menos de 5 cancelaciones, y la probabilidad de que en un 
 # cierto día la aplicación tenga más de 15 cancelaciones.
+
+# cdf: función de distribución acumulada
+prob_menor_5 = poisson.cdf(4, mu=lambda_poisson)
+prob_mas_15 = 1 - poisson.cdf(15, mu=lambda_poisson)
+
+print(f"1.6. Siendo X~P(λ={lambda_poisson:.2f})")
+print(f"P(X < 5) = {prob_menor_5}")
+print(f"P(X > 15) = {prob_mas_15}")
