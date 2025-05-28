@@ -4,6 +4,11 @@ import seaborn as sns
 import numpy as np 
 from scipy.stats import poisson
 
+#---------------------------------------------
+# PARTE 1: PROBLEMA DE CANCELACIÓN DE CUENTAS 
+# EN UNA APLICACIÓN WEB
+#---------------------------------------------
+
 #se extrae la tabla del archivo .csv
 datos = pd.read_csv('cancelaciones.csv')
 #se extrae la columna cancelaciones
