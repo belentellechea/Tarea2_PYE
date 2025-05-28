@@ -9,9 +9,9 @@ from scipy.stats import poisson
 # EN UNA APLICACIÓN WEB
 #---------------------------------------------
 
-#se extrae la tabla del archivo .csv
+# Se extrae la tabla del archivo .csv
 datos = pd.read_csv('cancelaciones.csv')
-#se extrae la columna cancelaciones
+# Se extrae la columna cancelaciones
 cancelaciones = datos['cancelaciones']
 
 #---------------------------------------------
